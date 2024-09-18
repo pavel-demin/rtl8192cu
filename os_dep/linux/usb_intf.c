@@ -69,7 +69,6 @@ int rtw_resume_process(_adapter *padapter);
 static int rtw_drv_init(struct usb_interface *pusb_intf,const struct usb_device_id *pdid);
 static void rtw_dev_remove(struct usb_interface *pusb_intf);
 
-#define USB_VENDER_ID_EDIMAX		0x7392 //EDX
 #define USB_VENDER_ID_REALTEK		0x0BDA
 
 /* DID_USB_v915_20121224 */
@@ -99,12 +98,14 @@ static void rtw_dev_remove(struct usb_interface *pusb_intf);
 	{USB_DEVICE(0x2019, 0xED17)},/* PCI - Edimax */ \
 	{USB_DEVICE(0x0DF6, 0x0052)},/* Sitecom - Edimax */ \
 	{USB_DEVICE(0x7392, 0x7811)},/* Edimax - Edimax */ \
+	{USB_DEVICE(0x07B8, 0x8188)},/* Abocom - Abocom */ \
 	{USB_DEVICE(0x07B8, 0x8189)},/* Abocom - Abocom */ \
 	{USB_DEVICE(0x0EB0, 0x9071)},/* NO Brand - Etop */ \
 	{USB_DEVICE(0x06F8, 0xE033)},/* Hercules - Edimax */ \
 	{USB_DEVICE(0x103C, 0x1629)},/* HP - Lite-On ,8188CUS Slim Combo */ \
 	{USB_DEVICE(0x2001, 0x3308)},/* D-Link - Alpha */ \
 	{USB_DEVICE(0x050D, 0x1102)},/* Belkin - Edimax */ \
+	{USB_DEVICE(0x050D, 0x11F2)},/* ISY - Edimax */ \
 	{USB_DEVICE(0x2019, 0xAB2A)},/* Planex - Abocom */ \
 	{USB_DEVICE(0x20F4, 0x648B)},/* TRENDnet - Cameo */ \
 	{USB_DEVICE(0x4855, 0x0090)},/*  - Feixun */ \
@@ -113,6 +114,8 @@ static void rtw_dev_remove(struct usb_interface *pusb_intf);
 	{USB_DEVICE(0x0BDA, 0x5088)},/* Thinkware - CC&C */ \
 	{USB_DEVICE(0x4856, 0x0091)},/* NetweeN - Feixun */ \
 	{USB_DEVICE(0x0846, 0x9041)}, /* Netgear - Cameo */ \
+	{USB_DEVICE(0x0846, 0x9042)}, /* On Networks - N150MA */ \
+	{USB_DEVICE(0x0846, 0x9043)}, /* Netgear N150 - WNA1000M */ \
 	{USB_DEVICE(0x2019, 0x4902)},/* Planex - Etop */ \
 	{USB_DEVICE(0x2019, 0xAB2E)},/* SW-WF02-AD15 -Abocom */ \
 	{USB_DEVICE(0x2001, 0x330B)}, /* D-LINK - T&W */ \
@@ -141,6 +144,7 @@ static void rtw_dev_remove(struct usb_interface *pusb_intf);
 	{USB_DEVICE(0x2001, 0x3307)},/* D-Link - Cameo */ \
 	{USB_DEVICE(0x2001, 0x330A)},/* D-Link - Alpha */ \
 	{USB_DEVICE(0x2001, 0x3309)},/* D-Link - Alpha */ \
+	{USB_DEVICE(0x2001, 0x330D)},/* D-Link DWA-131 (H/W Ver. B1) */ \
 	{USB_DEVICE(0x0586, 0x341F)},/* Zyxel - Abocom */ \
 	{USB_DEVICE(0x7392, 0x7822)},/* Edimax - Edimax */ \
 	{USB_DEVICE(0x2019, 0xAB2B)},/* Planex - Abocom */ \
@@ -149,7 +153,9 @@ static void rtw_dev_remove(struct usb_interface *pusb_intf);
 	{USB_DEVICE(0x4855, 0x0091)},/*  - Feixun */ \
 	{USB_DEVICE(0x050D, 0x2102)},/* Belkin - Sercomm */ \
 	{USB_DEVICE(0x050D, 0x2103)},/* Belkin - Edimax */ \
+	{USB_DEVICE(0x050D, 0x21F2)},/* Belkin - Edimax */ \
 	{USB_DEVICE(0x20F4, 0x624D)},/* TRENDnet */ \
+	{USB_DEVICE(0x20F4, 0x648C)},/* TRENDnet */ \
 	{USB_DEVICE(0x0DF6, 0x0061)},/* Sitecom - Edimax */ \
 	{USB_DEVICE(0x0B05, 0x17AB)},/* ASUS - Edimax */ \
 	{USB_DEVICE(0x0846, 0x9021)},/* Netgear - Sercomm */ \
